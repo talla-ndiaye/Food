@@ -64,7 +64,6 @@ const addFood = async (req, res) => {
 export { addFood, listFood, removeFood };
 
 */
-
 import fs from 'fs';
 import foodModel from "../models/foodModel.js";
 
@@ -111,8 +110,11 @@ const listFood = async (req, res) => {
 // Supprimer un élément alimentaire
 const removeFood = async (req, res) => {
     try {
+        // Trouvez l'élément alimentaire par son ID
         const food = await foodModel.findById(req.body.id);
+
         if (food) {
+            // Supprimez le fichier image associé
             fs.unlink(`uploads/${food.image}`, (err) => {
                 if (err) {
                     console.error(err);
@@ -120,6 +122,7 @@ const removeFood = async (req, res) => {
                 }
             });
 
+            // Supprimez l'élément alimentaire de la base de données
             await foodModel.findByIdAndDelete(req.body.id);
             res.json({ success: true, message: "Nourriture supprimée" });
         } else {
@@ -131,4 +134,19 @@ const removeFood = async (req, res) => {
     }
 };
 
-export { addFood, listFood, removeFood };
+const searchFood = async (req, res) => {
+
+    try {
+        const { query } = req.query;
+        const searchResult = await foodModel.find({
+            name: { $regex: query, $options: 'i' } // Case-insensitive search
+        });
+        res.json(searchResult);
+    } catch (error) {
+        res.status(500).json({ message: 'An error occurred while searching', error });
+    }
+
+}
+
+export { addFood, listFood, removeFood, searchFood };
+

@@ -6,9 +6,9 @@ const Header = () => {
     <div className='header'>
         <div className="header-contents">
 
-            <h2>Order Your favourite food here</h2>
-            <p>this is a test for uor website, so don't worry about all you will see.</p>
-            <button>View Menu</button>
+            <h2>Faites vous livrer votre commande en un clic</h2>
+            <p>Plus besoin de se deplacer pour passer vos commandes</p>
+            <button>Voir le Menu</button>
         </div>
       
     </div>

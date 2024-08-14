@@ -62,8 +62,8 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import './List.css';
 
-const List = () => {
-  const url = "http://localhost:4000";
+const List = ({url}) => {
+  //const url = "http://localhost:4000";
   const [list, setList] = useState([]); // Correction de l'initialisation de l'état
 
   const fetchList = async () => {
@@ -105,10 +105,10 @@ const List = () => {
       
       <div className="list-table-format title">
       <b>Image</b>
-      <b>Name</b>
-      <b>Catgory</b>
-      <b>Price</b>
-      <b>Action</b>
+      <b>Article</b>
+      <b>Catgorie</b>
+      <b>Prix</b>
+      <b>Supprimer</b>
       </div>
       {list.map((item,index)=>{
         return (

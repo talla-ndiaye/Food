@@ -18,17 +18,17 @@ const Footer = () => {
             </div>
 
             <div className="footer-content-center">
-                <h2>Compagny</h2>
+                <h2>Liens Utiles</h2>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Delivry</li>
+                    <li>Acceuil</li>
+                    <li>Menu</li>
+                    <li>Mobile-app</li>
                     <li>Privacy Policy</li>
                 </ul>
             </div>
 
             <div className="footer-content-right">
-                <h2>GET IN TOUCH</h2>
+                <h2>Service Client</h2>
                 <ul>
                     <li>+221 776453210</li>
                     <li>contact@gmail.com</li>
@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
         </div>
         <hr />
-        <p className="footer-copyright">Copyright 2024 © Talla. All right reserved</p>
+        <p className="footer-copyright">Copyright 2024 © Talla. Tout Droits résèrvés</p>
       
     </div>
   )

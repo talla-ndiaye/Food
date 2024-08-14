@@ -1,0 +1,75 @@
+/* Style pour centrer le conteneur de la réinitialisation du mot de passe */
+.reset-popup {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    height: 100vh;           /* Prend toute la hauteur de la fenêtre */
+    
+}
+
+/* Style pour le conteneur du formulaire */
+.reset-popup-container {
+    display: flex;
+    flex-direction: column;  /* Dispose les éléments en colonne */
+    width: 100%;
+    max-width: 500px;        /* Largeur maximale du formulaire */
+    min-height: 400px;       /* Hauteur minimale du formulaire */
+    padding: 30px;           /* Espacement intérieur */
+    background-color: #fff; /* Fond blanc pour le formulaire */
+    border-radius: 8px;     /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    box-sizing: border-box; /* Inclut les bordures et les marges dans la largeur totale */
+}
+
+/* Style pour le titre */
+.reset-popup-container h2 {
+    margin-bottom: 20px;     /* Espacement sous le titre */
+    text-align: center;      /* Centre le titre */
+}
+
+/* Style pour les champs de saisie */
+.reset-popup-container input {
+    margin-bottom: 15px;     /* Espacement entre les champs */
+    padding: 12px;           /* Espacement intérieur des champs */
+    border: 1px solid #ddd;  /* Bordure légère */
+    border-radius: 4px;     /* Coins arrondis pour les champs */
+    width: 100%;             /* Prend toute la largeur du conteneur */
+    box-sizing: border-box;  /* Inclut les bordures et les marges dans la largeur totale */
+}
+
+/* Style pour le bouton */
+.reset-popup-container button {
+    padding: 12px;           /* Espacement intérieur du bouton */
+    background-color: tomato; /* Couleur de fond du bouton */
+    color: #fff;             /* Couleur du texte */
+    border: none;            /* Supprime la bordure par défaut */
+    border-radius: 4px;     /* Coins arrondis pour le bouton */
+    cursor: pointer;         /* Curseur pointeur */
+    font-size: 16px;         /* Taille du texte */
+    width: 100%;             /* Prend toute la largeur du conteneur */
+}
+
+/* Style pour le bouton au survol */
+.reset-popup-container button:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+
+/* Responsivité */
+@media (max-width: 600px) {
+    .reset-popup-container {
+        padding: 20px; /* Moins d'espacement intérieur sur les petits écrans */
+    }
+    
+    .reset-popup-container input,
+    .reset-popup-container button {
+        padding: 10px; /* Moins d'espacement intérieur pour les champs et le bouton */
+    }
+    
+    .reset-popup-container h2 {
+        font-size: 1.5rem; /* Réduit la taille du titre sur les petits écrans */
+    }
+    
+    .reset-popup-container {
+        max-width: 100%; /* Largeur maximale du formulaire pour les petits écrans */
+    }
+}

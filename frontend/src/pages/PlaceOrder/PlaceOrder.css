@@ -1,48 +1,156 @@
-.place-order{
+/* PlaceOrder.css */
+
+/* Container for the order form */
+.place-order {
     display: flex;
-    align-items: start;
+    align-items: flex-start; /* Adjusted for better alignment */
     justify-content: space-between;
     gap: 50px;
     margin-top: 100px;
+    flex-wrap: wrap; /* Added to ensure responsiveness */
 }
 
-.place-order-left{
+/* Styling for the left side of the order form */
+.place-order-left {
     width: 100%;
-    max-width: max(30%,500px);
-
+    max-width: 30%; /* Ensured max-width is less than 500px */
 }
 
-
-
-.place-order-left .title{
+/* Title styling for the left side */
+.place-order-left .title {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 50px;
 }
 
-.place-order-left input{
+/* Input fields styling */
+.place-order-left input {
     margin-bottom: 15px;
     width: 100%;
     padding: 10px;
     border: 1px solid #c5c5c5;
     border-radius: 4px;
     outline-color: tomato;
-
 }
 
-.place-order-left .multi-fields{
+/* Multi-fields container styling */
+.place-order-left .multi-fields {
     display: flex;
     gap: 10px;
 }
-.place-order-right{
-    width: 100%;
-    max-width: max(40%,500px);
 
+/* Styling for the right side of the order form */
+.place-order-right {
+    width: 100%;
+    max-width: 40%; /* Ensured max-width is less than 500px */
 }
 
-.place-order .cart-total button{
+/* Button styling inside the cart-total section */
+.place-order .cart-total button {
     margin-top: 30px;
 }
 
+/* Styles for the payment method section */
+.payment-method {
+    background-color: #f2f2f2; /* Background color for the payment method section */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
 
+.payment-method p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
 
+.payment-method label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffddd6; /* Background color for each label */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 10px;
+}
+
+.payment-method label p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* Styles for disabled payment method option */
+.payment-method .disabled {
+    background-color: #e0e0e0; /* Light grey background for disabled option */
+    border: 1px solid #b0b0b0; /* Grey border for disabled option */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+    opacity: 0.6; /* Reduced opacity to indicate it's disabled */
+}
+
+.payment-method .disabled input[type="radio"] {
+    cursor: not-allowed; /* Ensure radio button cursor is not clickable */
+    pointer-events: none; /* Prevent interaction with the radio button */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .place-order-left, .place-order-right {
+        max-width: 100%;
+    }
+
+    .payment-method {
+        padding: 15px;
+    }
+
+    .payment-method p {
+        font-size: 1rem;
+    }
+
+    .payment-method label {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .payment-method label p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .place-order {
+        margin-top: 50px;
+        gap: 20px;
+    }
+
+    .place-order-left, .place-order-right {
+        max-width: 100%;
+    }
+
+    .payment-method {
+        padding: 10px;
+    }
+
+    .payment-method p {
+        font-size: 0.9rem;
+    }
+
+    .payment-method label {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .payment-method label p {
+        font-size: 0.7rem;
+    }
+}

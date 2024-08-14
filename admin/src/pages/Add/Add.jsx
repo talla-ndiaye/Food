@@ -122,8 +122,8 @@ import { toast } from 'react-toastify';
 import { assets } from '../../assets/assets';
 import './Add.css';
 
-const Add = () => {
-    const url = "http://localhost:4000";
+const Add = ({url}) => {
+    //const url = "http://localhost:4000";
 
     const [image, setImage] = useState(null);
     const [data, setData] = useState({
@@ -171,24 +171,28 @@ const Add = () => {
         <div className='add'>
             <form className="flex-col" onSubmit={onSubmitHandler}>
                 <div className="add-img-upload flex-col">
-                    <p>Upload images</p>
+                    <p>Upload image</p>
                     <label htmlFor="image">
                         <img src={image ? URL.createObjectURL(image) : assets.upload_area} alt="" />
                     </label>
                     <input onChange={(e) => setImage(e.target.files[0])} type="file" id="image" name="image" hidden required />
                 </div>
                 <div className="add-product-name flex-col">
-                    <p>Product Name</p>
-                    <input onChange={onChangeHandler} value={data.name} type="text" name='name' placeholder='type here' required />
+                    <p>Nom de L'article</p>
+                    <input onChange={onChangeHandler} value={data.name} type="text" name='name' placeholder='nom...' required />
                 </div>
                 <div className="add-product-description flex-col">
-                    <p>Product description</p>
-                    <textarea onChange={onChangeHandler} value={data.description} name='description' rows="6" placeholder='Write content here' required />
+                    <p>Description de L'article</p>
+                    <textarea onChange={onChangeHandler} value={data.description} name='description' rows="6" placeholder='Description...' required />
                 </div>
                 <div className="add-category-price">
                     <div className="add-category flex-col">
-                        <p>Product Category</p>
+                        <p>Categorie</p>
                         <select onChange={onChangeHandler} name="category" value={data.category}>
+                            <option value="Salad">Pizza</option>
+                            <option value="Salad">Burger</option>
+                            <option value="Salad">Donuts</option>
+                            <option value="Salad">Juice</option>
                             <option value="Salad">Salad</option>
                             <option value="Rolls">Rolls</option>
                             <option value="Deserts">Deserts</option>
@@ -200,11 +204,11 @@ const Add = () => {
                         </select>
                     </div>
                     <div className="add-price flex-col">
-                        <p>Product Price</p>
-                        <input onChange={onChangeHandler} value={data.price} type="number" name='price' placeholder='$20' required />
+                        <p>Prix</p>
+                        <input onChange={onChangeHandler} value={data.price} type="number" name='price' placeholder='10000 Fcfa' required />
                     </div>
                 </div>
-                <button type='submit' className='add-btn'>ADD</button>
+                <button type='submit' className='add-btn'>Ajouter</button>
             </form>
         </div>
     );
