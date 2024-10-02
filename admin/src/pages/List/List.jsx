@@ -63,7 +63,7 @@ import { toast } from 'react-toastify';
 import './List.css';
 
 const List = ({url}) => {
-  //const url = "http://localhost:4000";
+  
   const [list, setList] = useState([]); // Correction de l'initialisation de l'état
 
   const fetchList = async () => {
@@ -108,16 +108,17 @@ const List = ({url}) => {
       <b>Article</b>
       <b>Catgorie</b>
       <b>Prix</b>
-      <b>Supprimer</b>
+      <b className=''>Supprimer</b>
       </div>
       {list.map((item,index)=>{
         return (
           <div key={index} className="list-table-format">
             <img src={`${url}/images/`+item.image} alt="" />
-            <p>{item.name}</p>
-            <p>{item.category}</p>
-            <p>{item.price}</p>
-            <p onClick={()=>removeFood(item._id)} className='cursor'>X</p>
+            <p><strong className='hiden'>Article: </strong>{item.name}</p>
+            <p><strong className='hiden'>Categorie: </strong>{item.category}</p>
+            <p><strong className='hiden'>Prix: </strong>{item.price} Fcfa</p>
+            <button onClick={()=>removeFood(item._id)} className='cursor' >supprimer</button>
+            
           </div>
         )
 
@@ -129,5 +130,6 @@ const List = ({url}) => {
 };
 
 export default List;
+
 
 

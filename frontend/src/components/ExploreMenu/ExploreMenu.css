@@ -70,3 +70,63 @@
     }
     
 }
+
+@media (max-width: 950px) {
+
+    .explore-menu-text{
+        
+        font-size: 12px ;
+    }
+
+    h1{
+        font-size: 25px ;
+    }
+
+    .explore-menu-list-item img{
+        width: 7vw;
+        min-width: 70px;
+        
+    
+    }
+    
+}
+
+@media (max-width: 750px) {
+
+    .explore-menu-text{
+        
+        font-size: 10px ;
+    }
+
+    h1{
+        font-size: 20px ;
+    }
+
+    .explore-menu-list-item img{
+        width: 6vw;
+        min-width: 60px;
+        
+    
+    }
+    
+}
+
+@media (max-width: 750px) {
+
+    .explore-menu-text{
+        
+        font-size: 12px ;
+    }
+
+    h1{
+        font-size: 18px ;
+    }
+
+    .explore-menu-list-item img{
+        width: 5.5vw;
+        min-width: 55px;
+        
+    
+    }
+    
+}

@@ -54,10 +54,10 @@ const Users = ({ url }) => {
             {listUsers.map((user, index) => (
                 <div key={index} className="list-user-format">
                     <img src={assets.profile_icon} alt="" />
-                    <p>{user.name}</p>
-                    <p>{user.email}</p>
-                    <p>{user.phone}</p>
-                    <p onClick={() => removeUser(user._id)} className='cursor'>X</p>
+                    <p><strong className='hiden'>Nom: </strong>{user.name}</p>
+                    <p><strong className='hiden'>Email: </strong>{user.email}</p>
+                    <p><strong className='hiden'>Téléphone: </strong>{user.phone}</p>
+                    <button onClick={() => removeUser(user._id)} className='cursor' >Supprimer</button>
                 </div>
             ))}
         </div>

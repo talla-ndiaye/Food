@@ -97,20 +97,6 @@
     list-style: none; /* Remove bullet points */
 }
 
-/* Search Input Styles */
-.search-input {
-    padding: 5px; /* Padding inside the input */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 3px; /* Slightly rounded corners */
-    margin-left: 10px; /* Margin to the left of the input */
-    transition: width 0.3s ease; /* Smooth transition for width */
-    width: 200px; /* Default width of the search input */
-}
-
-/* Search Icon Style */
-.search-icon {
-    cursor: pointer; /* Pointer cursor on hover */
-}
 
 /* Responsive Adjustments for Screens <= 1050px */
 @media (max-width: 1050px) {
@@ -135,16 +121,16 @@
 /* Responsive Adjustments for Screens <= 900px */
 @media (max-width: 900px) {
     .navbar .logo {
-        width: 120px; /* Further reduce logo size */
+        width: 110px; /* Further reduce logo size */
     }
 
     .navbar-menu {
-        gap: 15px; /* Reduce space between menu items */
-        font-size: 16px; /* Further reduce font size */
+        gap: 16px; /* Reduce space between menu items */
+        font-size: 15px; /* Further reduce font size */
     }
 
     .navbar-right {
-        gap: 15px; /* Reduce gap between elements to fit them on the same line */
+        gap: 20px; /* Reduce gap between elements to fit them on the same line */
     }
 
     .navbar-right button {
@@ -155,57 +141,62 @@
 
 /* Responsive Adjustments for Screens <= 750px */
 @media (max-width: 750px) {
+
+    .navbar .logo {
+        width: 100px; /* Further reduce logo size */
+    }
     .navbar-menu {
-        display: none; /* Hide the menu on small screens */
+        gap: 15px; /* Space between menu items */
+        font-size: 16px; /* Font size of menu items */ /* Hide the menu on small screens */
     }
 
     .navbar-right {
-        gap: 10px; /* Reduce gap between elements */
-    }
-
-    .search-input {
-        width: 120px; /* Reduce search input width */
+        gap: 15px; /* Reduce gap between elements to fit them on the same line */
     }
 
     .navbar-right button {
-        padding: 5px 15px; /* Further reduce button size */
-        font-size: 14px; /* Reduce font size */
+        padding: 5px 15px; /* Further reduce padding for the button */
+        font-size: 13px; /* Reduce font size for the button */
     }
 }
 
 /* Responsive Adjustments for Screens <= 600px */
-@media (max-width: 600px) {
-    .navbar-right {
-        gap: 8px; /* Further reduce gap between elements */
+@media (max-width: 650px) {
+    .navbar .logo {
+        width: 90px; /* Further reduce logo size */
     }
 
-    .search-input {
-        width: 100px; /* Further reduce search input width */
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-right {
+        gap: 12px; /* Reduce gap between elements to fit them on the same line */
     }
 
     .navbar-right button {
-        padding: 4px 12px; /* Reduce button padding */
-        font-size: 13px; /* Further reduce font size */
+        padding: 4px 12px; /* Further reduce padding for the button */
+        font-size: 12px; /* Reduce font size for the button */
     }
+
+
+}
+
+@media (max-width: 500px) {
+    
+
+    .navbar-right {
+        gap: 10px; /* Reduce gap between elements to fit them on the same line */
+    }
+
+    .navbar-right button {
+        padding: 3px 10px; /* Further reduce padding for the button */
+        font-size: 10px; /* Reduce font size for the button */
+    }
+
 }
 
 
 
-.search-results {
-    position: absolute;
-    background: white;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-}
 
-.search-result-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
 
-.search-result-item a {
-    text-decoration: none;
-    color: #333;
-}

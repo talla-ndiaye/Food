@@ -40,3 +40,7 @@ const FoodItem = ({ id = '', name = '', price = 0, description = '', image = '' 
 }
 
 export default FoodItem;
+
+
+
+

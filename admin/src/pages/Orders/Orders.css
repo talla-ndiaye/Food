@@ -49,7 +49,8 @@
   transition: background-color 0.3s ease;
 }
 
-@media (max-width: 1000px) {
+
+@media (max-width: 1200px) {
     .order-item {
         font-size: 12px;
         grid-template-columns: 0.5fr 2fr 1fr 1fr;
@@ -66,7 +67,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
     .order-item {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -141,8 +142,8 @@
 }
 
 .receipt-table th {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #f2f2f2;
+  color: #000;
 }
 
 .receipt-summary {

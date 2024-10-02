@@ -8,7 +8,7 @@ const Header = () => {
 
             <h2>Faites vous livrer votre commande en un clic</h2>
             <p>Plus besoin de se deplacer pour passer vos commandes</p>
-            <button>Voir le Menu</button>
+            <button href="#explore-menu">Voir le Menu</button>
         </div>
       
     </div>

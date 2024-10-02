@@ -1,35 +1,35 @@
-.header{
-    height: 34vw;
-    margin:  30px auto;
-    background: url('/header_img.png');
+.header {
+    height: 35vw;
+    margin: 30px;
+    background: url('/header_img.png') no-repeat;
     background-size: contain;
     position: relative;
 }
-.header-contents{
+
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start; /* Aligne à gauche */
     gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
+    max-width: 70%;
+    bottom: 15%;
     left: 6vw;
     animation: fadeIn 3s;
 }
 
-.header-contents h2{
+.header-contents h2 {
     font-weight: 500;
     color: white;
-    font-size: max(4.5vw,22px);
-
+    font-size: max(4.5vw, 22px);
 }
 
-.header-contents p{
+.header-contents p {
     color: white;
     font-size: 1vw;
 }
 
-.header-contents button{
+.header-contents button {
     border: none;
     color: #747474;
     font-weight: 500;
@@ -37,33 +37,101 @@
     background-color: white;
     font-size: max(1vw, 13px);
     border-radius: 50px;
+}
+
+@media(max-width: 1050px) {
+    .header-contents {
+        max-width: 60%;
+    }
+}
+
+/* Ajustements pour écrans jusqu'à 900px */
+@media (max-width: 900px) {
+    .header {
+        height: 37vw;
+    }
+    .header-contents h2 {
+        font-size: max(4vw, 20px); /* Ajuste la taille du texte */
+    }
+    .header-contents p {
+        font-size: 2vw; /* Ajuste la taille du texte */
+    }
+    .header-contents button {
+        font-size: max(1vw, 10px); /* Ajuste la taille du texte du bouton */
+        padding: 1vw 2.1vw; /* Ajuste le padding */
+    }
+}
+
+/* Ajustements pour écrans jusqu'à 750px */
+@media (max-width: 750px) {
+    .header-contents h2 {
+        font-size: max(4vw, 20px); /* Ajuste la taille du texte */
+    }
+    .header-contents p {
+        font-size: 2vw; /* Ajuste la taille du texte */
+    }
+    .header-contents button {
+        font-size: max(1vw, 10px); /* Ajuste la taille du texte du bouton */
+        padding: 1vw 2.1vw; /* Ajuste le padding */
+    }
+}
+
+/* Ajustements pour écrans jusqu'à 650px */
+@media (max-width: 500px) {
+    .header-contents h2 {
+        font-size: max(3.5vw, 18px); /* Ajuste la taille du texte */
+    }
+    .header-contents p {
+        font-size: 2vw; /* Ajuste la taille du texte */
+    }
+    .header-contents button {
+        font-size: max(1vw, 10px); /* Ajuste la taille du texte du bouton */
+        padding: 0.8vw 1.9vw; /* Ajuste le padding */
+    }
 
 }
 
-
-@media(max-width:1050px) {
-   
-
-    .header-contents{
-       max-width: 45%;
+@media (max-width: 420px) {
+    .header-contents h2 {
+        font-size: max(3vw, 17px); /* Ajuste la taille du texte */
     }
+    .header-contents p {
+        font-size: 2vw; /* Ajuste la taille du texte */
+    }
+    .header-contents button {
+        font-size: max(1vw, 8px); /* Ajuste la taille du texte du bouton */
+        padding: 1vw 1.8vw; /* Ajuste le padding */
+    }
+}
 
+@media (max-width: 380px) {
+    .header-contents h2 {
+        font-size: max(2vw, 16px); /* Ajuste la taille du texte */
+    }
+    .header-contents p {
+        font-size: 2vw; /* Ajuste la taille du texte */
+    }
+    .header-contents button {
+        font-size: max(1vw, 6px); /* Ajuste la taille du texte du bouton */
+        padding: 1vw 1.5vw; /* Ajuste le padding */
+    }
+    .header-contents{
+       
+            bottom: 20%;
+            
+    }
     
 }
 
-@media(max-width:750px) {
-    .header-contents{
-        max-width: 55%;
-     }
- 
-
-    .header-contents p{
-       display: none;
+@media (max-width: 350px) {
+    .header-contents h2 {
+        font-size: max(2vw, 14px); /* Ajuste la taille du texte */
     }
-
-    .header-contents button{
-        padding: 2vw 4vw;
+    .header-contents p {
+        font-size: 1.8vw; /* Ajuste la taille du texte */
     }
- 
-    
+    .header-contents button {
+        font-size: max(0.9vw, 5px); /* Ajuste la taille du texte du bouton */
+        padding: 1vw 1.5vw; /* Ajuste le padding */
+    }
 }
