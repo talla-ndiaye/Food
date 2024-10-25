@@ -2,6 +2,7 @@ import cors from "cors"
 import 'dotenv/config.js'
 import express from "express"
 import { connectDB } from "./config/db.js"
+import adminRouter from "./router/adminrouter.js"
 import cartRouter from "./router/cartRouter.js"
 import foodRouter from "./router/foodRouter.js"
 import orderRouter from "./router/orderRouter.js"
@@ -28,6 +29,7 @@ connectDB();
 app.use("/api/food", foodRouter)
 app.use("/images", express.static('uploads'))
 app.use("/api/user",userRouter)
+app.use("/api/admin",adminRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
 
